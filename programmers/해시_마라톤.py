@@ -2,7 +2,7 @@
 
 def solution1(participant, completion):
     answer = ''
-    
+
     for i in completion :
         if i in participant :
             participant.remove(i)
@@ -24,22 +24,25 @@ n^2, n^3 ->nlogn ,n, n^2, n^2logn
 #해시로 개선된 코드
 
 def solution2(participant, completion):
-    
+
     P={}
-    
+    print(P)
     for i in participant :
         P[i]=0
-    
+    print(P)
+
     for i in participant :
         P[i]+=1
-        
+    print(P)
+
     for i in completion :
         P[i]-=1
-    
+    print(P)
+
     for i in P :
         if P[i]==1 :
             return i
-         
+
 '''
 
 N 이다. 4*N
@@ -64,3 +67,4 @@ for
 
 
 '''
+print( solution2(['a','b','c'],['a','c']) )
